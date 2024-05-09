@@ -33,15 +33,15 @@ crazySum(3, 3);
 */
 console.log("--------------------------------- ESERCIZIO 3 ---------------------------------");
 
-function crazyDiff(n1, n2 = 19) {
-  let resultC = n1 - n2;
+function crazyDiff(n1) {
+  let resultC = n1 - 19;
   if (resultC < 0) {
     return "la differenza assoluta è: " + Math.abs(resultC);
   } else {
-    return "la differenza assoluta moltiplicata per 3 è: " + resultC * 3;
+    return "la differenza assoluta moltiplicata per 3 è: " + Math.abs(resultC) * 3;
   }
 }
-console.log(crazyDiff(22));
+console.log(crazyDiff(30));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -56,7 +56,7 @@ function boundary(n) {
     return false;
   }
 }
-console.log(boundary(50));
+console.log(boundary(400));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
