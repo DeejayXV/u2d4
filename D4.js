@@ -50,28 +50,45 @@ console.log(crazyDiff(22));
 console.log("--------------------------------- ESERCIZIO 4 ---------------------------------");
 
 function boundary(n) {
-  if (n > 20 || n <= 100 || n === 400) {
-    return "true";
+  if ((n > 20 && n <= 100) || n === 400) {
+    return true;
   } else {
-    return "false";
+    return false;
   }
 }
-console.log(boundary(3));
+console.log(boundary(50));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
  ritornare la stringa originale senza alterarla.
 */
+console.log("--------------------------------- ESERCIZIO 5 ---------------------------------");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function epify(stringa) {
+  if (stringa.startsWith("EPICODE ")) {
+    return stringa;
+  } else {
+    return "EPICODE " + stringa;
+  }
+}
+console.log(epify("ajeje"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
+console.log("--------------------------------- ESERCIZIO 6 ---------------------------------");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(n1) {
+  if (n1 % 3 === 0 || n1 % 7 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(check3and7(21));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
