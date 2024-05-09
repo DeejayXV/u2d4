@@ -17,14 +17,15 @@ console.log("l'area del rettangolo è: ", area(3, 4));
 console.log("--------------------------------- ESERCIZIO 2 ---------------------------------");
 
 function crazySum(n1, n2) {
-  const resultB = n1 + n2;
+  let resultB = n1 + n2;
   if (n1 === n2) {
-    console.log("La somma dei due numeri moltiplicata per 3 è: ", resultB * 3);
-    return;
+    console.log("La somma dei due numeri moltiplicata moltiplicata per 3 è: ", resultB * 3);
+  } else {
+    console.log("la somma dei due numeri è:", n1 + n2);
   }
-  console.log("la somma dei due numeri è:", n1 + n2);
+  return resultB;
 }
-crazySum(5, 5);
+crazySum(3, 3);
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
@@ -32,12 +33,30 @@ crazySum(5, 5);
 */
 console.log("--------------------------------- ESERCIZIO 3 ---------------------------------");
 
+function crazyDiff(n1, n2 = 19) {
+  let resultC = n1 - n2;
+  if (resultC < 0) {
+    return "la differenza assoluta è: " + Math.abs(resultC);
+  } else {
+    return "la differenza assoluta moltiplicata per 3 è: " + resultC * 3;
+  }
+}
+console.log(crazyDiff(22));
+
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
 */
+console.log("--------------------------------- ESERCIZIO 4 ---------------------------------");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary(n) {
+  if (n > 20 || n <= 100 || n === 400) {
+    return "true";
+  } else {
+    return "false";
+  }
+}
+console.log(boundary(3));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
