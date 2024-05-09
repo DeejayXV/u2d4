@@ -87,14 +87,20 @@ function check3and7(n1) {
     return false;
   }
 }
-
 console.log(check3and7(21));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
+console.log("--------------------------------- ESERCIZIO 7 ---------------------------------");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function reverseString(stringa) {
+  let stringaSplit = stringa.split("");
+  let arrayReverse = stringaSplit.reverse();
+  let stringaReverse = arrayReverse.join("");
+  return stringaReverse;
+}
+console.log(reverseString("EPICODEEEE"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -107,8 +113,13 @@ console.log(check3and7(21));
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+console.log("--------------------------------- ESERCIZIO 9 ---------------------------------");
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(stringa) {
+  let stringa1 = stringa.slice(1, -1);
+  return stringa1;
+}
+console.log(cutString("epicode"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
